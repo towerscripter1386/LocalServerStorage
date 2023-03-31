@@ -2,14 +2,14 @@ local module = {}
 
 function module:CreateDataStorage(Name:string)
 	local DataManipulation = setmetatable({},{})
-	if not self[Name] then
-		DataStorage[Name] = {}
+	if not module[Name] then
+		module[Name] = {}
 	end
 	function DataManipulation:SetAsync(Key:string,Value:any)
-		DataStorage[Name][Key] = Value
+		module[Name][Key] = Value
 	end
 	function DataManipulation:GetAsync(Key:string)
-		return DataStorage[Name][Key] 
+		return module[Name][Key] 
 	end
 	return DataManipulation
 end
