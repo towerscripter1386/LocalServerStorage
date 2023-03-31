@@ -1,6 +1,6 @@
 local module = {}
 
-function DataStorage:CreateDataStorage(Name:string)
+function module:CreateDataStorage(Name:string)
 	local DataManipulation = setmetatable({},{})
 	if not self[Name] then
 		DataStorage[Name] = {}
